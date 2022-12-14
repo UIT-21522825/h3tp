@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">STT</th>
+      <th scope="col">Name</th>
+      <th scope="col">thum</th>
+      <th scope="col">slub</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each course}}
+    <tr>
+      <th scope="row">{{sum @index 1}}</th>
+      <td>{{this.name}}</td>
+      <td>{{this.thumb}}</td>
+      <td>{{this.slug}}</td>
+      <td><a class="btn btn-primary" href="/course/{{this._id}}/edit" role="button">Sửa</a></td>
+      <td><a class="btn btn-primary" id="btn-detele-course" data-id="{{this._id}}" href="#" >Xóa</a></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+</body>
+</html>
+<form name="delete-form" method="POST"></form>
+<script>
+    var deleteBtn = document.querySelectorAll('#btn-detele-course');
+    var deleteForm = document.forms["delete-form"];
+    deleteBtn.forEach((course)=>{
+      course.addEventListener('click',()=>{
+        console.log(course);
+        var id = course.getAttribute('data-id');
+        deleteForm.action = '/course/'+id+'?_method=DELETE';
+        deleteForm.submit();
+      });
+    });
+</script>
+
+
+
+
+

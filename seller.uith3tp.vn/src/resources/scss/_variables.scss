@@ -1,0 +1,46 @@
+*{
+    box-sizing: inherit;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+html{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    background: rgba(74, 153, 211, 0.1);
+}
+.web{
+}
+.navbar__list-open-icon{
+    float: right;
+    padding-right: 24px;
+    font-size: 12px;
+    padding-top: 2px;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.navbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.navbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.homepage__marketing__voucher-packet::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.homepage__marketing__voucher-packet {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.homepage__marketing__voucher-code::-webkit-scrollbar {
+    display: none;
+}
+.homepage__marketing__voucher-code{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
