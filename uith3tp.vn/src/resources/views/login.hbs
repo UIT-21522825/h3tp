@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>  
+    <div class="header-nav" style="background: #0070AE;
+    height: 130px;">
+        <img src="img/footer-logo.png" alt="" style="    height: 180%;
+        margin-top: -40px;">
+    </div>
+    <section class="container forms">
+        <!-- LOGIN -->
+        <div class="form login">
+            <div class="form-content">
+                <header>Đăng nhập</header>
+                <form action="/login/redirect" method="POST">
+                    <div class="field input-field">
+                        <input type="text" placeholder="Tên đăng nhập" class="input" name="name">
+                    </div>
+                    <div class="field input-field">
+                        <input type="password" placeholder="Mật khẩu" class="password" name="password">
+                        <i class='bx bx-hide eye-icon'></i>
+                    </div>
+                        <div class="field input-field">
+                        
+                    </div>
+                    <div class="form-link">
+                        <a href="#" class="forgot-pass">Quên mật khẩu?</a>
+                    </div>
+
+                    <div class="field button-field">
+                        <button>ĐĂNG NHẬP</button>
+                    </div>
+                </form>
+                <div class="form-link">
+                    <span>Bạn là thành viên mới? <a href="#" class="link signup-link">Đăng ký</a></span>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div style="display:flex;">
+                <div class="media-options" style="width:30%;    margin-right: -35px;    margin-left: 112px;">
+                    <a href="#" class="field facebook" style="    width: 38%;
+                    height: 40px;">
+                        <i class='bx bxl-facebook facebook-icon'></i>
+                    </a>
+                </div>
+                <div class="media-options">
+                    <a href="#" class="field facebook" style="    width: 61px;
+                    height: 40px;
+                    color: green;
+                    font-weight: 800;">
+                        SMS
+                    </a>
+                </div>
+                <div class="media-options" style="width:30%;    margin-left: -35px;">
+                    <a href="#" class="field google" style="width: 38%;
+                    height: 40px;background-color: #D9D9D9;">
+                        <img src="/WEB NHOM/login/gg.png" alt="" class="google-img">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- SIGNUP -->
+        <div class="form signup">
+            <div class="form-content">
+                <header>Đăng ký</header>
+                <form action="/register" method="POST">
+                    <div class="field input-field">
+                        <input type="text" placeholder="Số điện thoại" class="input" name="name">
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="text" placeholder="Email" class="" name="email">
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="password" placeholder="Mật khẩu" class="password" name="password">
+                        <i class='bx bx-hide eye-icon'></i>
+                    </div>
+                    <div class="form-link">
+                        <span>Tôi đã đọc và đồng ý với Điều Khoản Sử Dụng và Chính Sách Bảo Mật của H3TP, bao gồm quyền thu thập, sử dụng và tiết lộ dữ liệu cá nhân của tôi theo pháp luật quy định.</span>
+                    </div>
+                    <div class="field button-field">
+                        <button>ĐĂNG KÝ</button>
+                    </div>
+
+                </form>
+                <div class="form-link">
+                    <span>Bạn đã là thành viên?<a href="#" class="link login-link">Đăng nhập</a></span>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div style="display:flex;">
+                <div class="media-options" style="width:30%;    margin-right: -35px;    margin-left: 112px;">
+                    <a href="#" class="field facebook" style="    width: 38%;
+                    height: 40px;">
+                        <i class='bx bxl-facebook facebook-icon'></i>
+                    </a>
+                </div>
+                <div class="media-options">
+                    <a href="#" class="field facebook" style="    width: 61px;
+                    height: 40px;
+                    color: green;
+                    font-weight: 800;">
+                        SMS
+                    </a>
+                </div>
+                <div class="media-options" style="width:30%;    margin-left: -35px;">
+                    <a href="#" class="field google" style="width: 38%;
+                    height: 40px;background-color: #D9D9D9;">
+                        <img src="/WEB NHOM/login/gg.png" alt="" class="google-img">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <footer class="footer" style="height: 400px;
+    margin-top: 0;">
+        <div class="grid">
+            <div class="grid__row" style="justify-content:space-between ;">
+                <div class="footer_grid_column">
+                    <img src="/img/footer-logo.png" alt="" class="footer-img">
+                </div>
+                
+                <div class="footer_grid_column">
+                    <div class="footer__contact">
+                        <span class="footer__contact-heading">
+                            Subsribe to our newsletter and be the first to know about our updates
+                        </span>
+                        <div class="footer__contact-email">
+                            <input type="text" placeholder="Email Address" class="footer__contact-email-input">
+                            <p style="color: #4A99D3;
+                            background: white;
+                            padding: 10px 32px;
+                            font-weight: 900;
+                            border-radius: 6px;
+                            margin-left: 20px;
+                            line-height: 30px;cursor: pointer;">Subsribe</p>
+                        </div>
+                        <div class="footer__contact-dowload">
+                            <img src="/img/googleplay.png" alt="" style="    width: 196px;
+                            height: 62px;cursor: pointer;">
+                            <img src="/img/appstore.png" alt="" style="    width: 196px;
+                            height: 62px;cursor: pointer;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // login js
+const forms = document.querySelector(".forms"),
+      pwShowHide = document.querySelectorAll(".eye-icon"),
+      links = document.querySelectorAll(".link");
+
+pwShowHide.forEach(eyeIcon => {
+    eyeIcon.addEventListener("click", () => {
+        let pwFields = eyeIcon.parentElement.parentElement.querySelectorAll(".password");
+        
+        pwFields.forEach(password => {
+            if(password.type === "password"){
+                password.type = "text";
+                eyeIcon.classList.replace("bx-hide", "bx-show");
+                return;
+            }
+            password.type = "password";
+            eyeIcon.classList.replace("bx-show", "bx-hide");
+        })
+        
+    })
+})      
+
+links.forEach(link => {
+    link.addEventListener("click", e => {
+       e.preventDefault(); //preventing form submit
+       forms.classList.toggle("show-signup");
+    })
+})
+ 
+
+    </script>
+    <script src="/js/web_js.js"></script>
+</body>
+</html>

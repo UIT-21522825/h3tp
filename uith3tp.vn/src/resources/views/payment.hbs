@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/54f0cb7e4a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/payment.css">
+    <title>Document</title>
+</head>
+<body>
+
+   <!-- PAYMENT -->
+   <section class="payment">
+        <div class="container" >
+            <div class="payment-top-wrap" style="width:700px;margin:0 auto;">
+                <div class="payment-top">
+                    <div class="payment-top-delivery ">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="payment-top-payment payment-top-item">
+                        <i class="fas fa-money-check-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="payment-content row">
+                <!-- ĐỊA CHỈ -->
+                <div class="payment-content-left">
+                    <p style="font-weight: bold; font-size: 20px;">Vui lòng chọn Địa chỉ: </p>
+                    <div class="payment-content-left-address">
+                        <div class="delivery-content-left-1 row">
+                            <input name="address" type="checkbox">
+                            <label for="" style="font-weight: bold; font-size: 15px;">Địa chỉ đã lưu:</label>
+                            <select name="" id="">
+                                <option value="">
+                                    <p>Thanh Tâm</p>
+                                    <p> - 0926499281</p>
+                                    <p> - 182/10 Hiệp Bình</p>
+                                    <p> - Phường Hiệp Bình Chánh, Quận Thủ Đức, Thành phố Hồ Chí Minh</p>
+                                </option>
+                                <option value="">
+                                    <p><span style="font-weight:bold;">Nguyen Van A</span></p>
+                                    <p> - 0926499281</p>
+                                    <p> - 182/10 Hiệp Bình</p>
+                                    <p> - Phường Hiệp Bình Chánh, Quận Thủ Đức, Thành phố Hồ Chí Minh</p>
+                                </option>
+                                <option value="">
+                                    <p><span style="font-weight:bold;">Nguyen Van B</span></p>
+                                    <p> - 0926499281</p>
+                                    <p> - 182/10 Hiệp Bình</p>
+                                    <p> - Phường Hiệp Bình Chánh, Quận Thủ Đức, Thành phố Hồ Chí Minh</p>
+                                </option>
+                            </select>
+                        </div>
+                        <div class="delivery-content-left-1 row">
+                            <input name="address" type="checkbox" onclick="showNewAddress()">
+                            <label for="" style="font-weight: bold; font-size: 15px;">Địa chỉ mới:</label>
+                            <div class="new-address">
+                                <div class=" payment-content-left-input-top row">
+                                    <div class="payment-content-left-input-top-item">
+                                        <label for=""></label>
+                                        <span style="color: red;">*</span>
+                                        <input type="text" placeholder="Họ và tên">
+                                    </div>
+                                    <div class="payment-content-left-input-top-item">
+                                        <label for=""></label>
+                                        <input type="text" placeholder="Số điện thoại">
+                                    </div>
+                                    <div class="payment-content-left-input-top-item">
+                                        <label for=""><br></label>
+                                        <input type="text" placeholder="Tỉnh/Thành phố">
+                                    </div>
+                                    <div class="payment-content-left-input-top-item">
+                                        <label for=""><br></label>
+                                        <input type="text" placeholder="Quận/Huyện">
+                                    </div>
+                                </div>
+                                <div class="payment-content-left-input-bottom">
+                                    <label for=""><br></label>
+                                    <input type="text" placeholder="Phường/Xã">
+                                    <label for=""><br></label>
+                                    <input type="text" placeholder="Địa chỉ cụ thể">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- VẬN CHUYỂN -->
+                    <p style="font-weight: bold; font-size: 20px; margin-bottom: 15px;">Đơn vị vận chuyển:</p>
+                    <div class="payment-content-left-method-delivery">
+                        <div class="payment-content-left-method-delivery-item">
+                            <div style="display:flex;align-item:center;">
+                                <input name="transport" type="checkbox">
+                                <label for="" style="font-weight: bold;">Giao hàng chuyển phát nhanh</label>
+                                <p style="margin: 0; padding-left: 17px; color:red; font-weight: bold;">35.000<sup>đ</sup></p>
+                            </div>
+                            <p>
+                                <p style="padding-left: 17px;">Nhận hàng vào 6 Th12 - 8 Th12</p>
+                                <p style="padding-left: 17px;">(Đừng quên vào "H3TP Voucher" để săn thêm mã ưu đãi bạn nhé!)</p>
+                            </p>
+                        </div>
+                        &nbsp;
+                        <div class="payment-content-left-method-delivery-item">
+                            <input name="transport" type="checkbox">
+                            <label for="">Hỏa tốc</label>
+                            <p>
+                                <p style="padding-left: 17px; color:red; font-weight: bold;">60.000<sup>đ</sup></p>
+                                <p style="padding-left: 17px;">Nhận hàng vào 6 Th12 - 8 Th12</p>
+                                <p style="padding-left: 17px;">(Đừng quên vào "H3TP Voucher" để săn thêm mã ưu đãi bạn nhé!)</p>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                    <!-- THANH TOÁN -->
+                    <div class="payment-content-left-method-payment">
+                        <p style="font-weight: bold;">Phương thức thanh toán</p>
+                        <p>Mọi giao dịch đều được bảo mật và mã hóa. Thông tin thẻ tín dụng không bao giờ được lưu lại</p>
+                        <div class="payment-content-left-method-payment-item">
+                            <input name="payment" type="checkbox">
+                            <label for="">Ví H3TPPay</label>
+                            <div class="payment-content-left-method-payment-item-img">
+                                <img src="./H3TPPAY1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="payment-content-left-method-payment-item">
+                            <input name="payment" type="checkbox">
+                            <label for="">Thẻ tín dụng/Ghi nợ</label>
+                            <div class="payment-content-left-method-payment-item-img">
+                                <img src="./SEA1.png" alt="">
+                                <img src="./JCB1.png" alt="">
+                                <img src="./OCB1.png" alt="">
+                                <img src="./BIDV1.png" alt="">
+                                <img src="./VIB1.png" alt="">
+                                <img src="./SHB1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="payment-content-left-method-payment-item">
+                            <input name="payment" type="checkbox">
+                            <label for="">Thanh toán Momo</label>
+                        </div>
+                        <div class="payment-content-left-method-payment-item">
+                            <input name="payment" type="checkbox">
+                            <label for="">Thanh toán khi nhận hàng</label>
+                            <p>Phí thu hộ: ₫0 VNĐ. Ưu đãi về phí vận chuyển (nếu có) áp dụng cả với phí thu hộ.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="payment-content-right">
+                    <!-- DANH SÁCH SẢN PHẨM -->
+                    <table>
+                        <tr>
+                            <th>Cửa hàng</th>
+                            <th>Hình ảnh</th>
+                            <th>Sản phẩm</th>
+                            <th>Đơn giá</th>
+                            <th>Số lượng</th>
+                            <th>Bảo hiểm sản phẩm<br>(Sản phẩm được bảo hiểm khỏi các thiệt hại khi vận chuyển)</th>
+                            <th>Thành tiền</th>
+                        </tr>
+                        <tr>
+                            <td><span style="background-color: #0070AE; color: white; padding-top: 5px; font-weight: bold; font-size: 8px;"><sup>Yêu Thích</sup></span>Vini.Store</td>
+                            <td><img src="./sp1.jpg" alt=""></td>
+                            <td>Cừu bông trắng lông xù cao cấp</td>
+                            <td><p>70.000<sup>đ</sup></p></td>
+                            <td>1</td>
+                            <td></td>
+                            <td><p>70.000<sup>đ</sup></p></td>
+                        </tr>
+                        <tr>
+                            <td><span style="background-color: #0070AE; color: white; padding-top: 5px; font-weight: bold; font-size: 8px;"><sup>MALL</sup></span>Xiaozhainv.vn</td>
+                            <td><img src="./sp2h3tp.png" alt=""></td>
+                            <td>Xiaozhainv Áo Thun Tay Dài Dáng Rộng</td>
+                            <td><p>159.000<sup>đ</sup></p></td>
+                            <td>1</td>
+                            <td>
+                                <div class="payment-content-right-safety">
+                                    <input name="safety" type="radio">
+                                    <label for="">Bảo hiểm thời trang<br>
+                                        <p>795<sup>đ</sup></p>
+                                    </label>
+                                </div>
+                            </td>
+                            <td><p>159.000<sup>đ</sup></p></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:bold;" colspan="6">Tổng tiền hàng:</td>
+                            <td style="font-weight:bold;"><p>229.000<sup>đ</sup></p></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:bold;" colspan="6">Tổng phí vận chuyển:</td>
+                            <td style="font-weight:bold;"><p>32.000<sup>đ</sup></p></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:bold;" colspan="6">Giảm giá phí vận chuyển:</td>
+                            <td style="font-weight:bold;"><p>-10.000<sup>đ</sup></p></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:bold;" colspan="6">Tổng cộng Voucher giảm giá:</td>
+                            <td style="font-weight:bold;"><p>-14.000<sup>đ</sup></p></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:bold;" colspan="6">Tổng thanh toán:</td>
+                            <td style="font-weight:bold;"><p>257.000<sup>đ</sup></p></td>
+                        </tr>
+                    </table>
+                    <!-- VOUCHER -->
+
+                    <!-- LỜI NHẮN -->
+                    <div class="payment-content-right-button">
+                        <input type="text" placeholder="Lời nhắn cho người bán">
+                        <button style="background:#0070AE;"><i class="fas fa-check"></i></button>
+                    </div>
+
+                    <!-- QUÀ TẶNG -->
+                    <div class="payment-content-right-gift">
+                        <input name="gift" type="checkbox" onclick="showNewGift()">
+                            <label for="" style="font-weight:bold;">Quà tặng:</label>
+                            <div class= "gift">
+                                <div class="payment-content-right-gift-top row">
+                                    <div class="payment-content-right-gift-top-item">
+                                        <label for="">Họ tên người nhận:<span style="color: red;">*</span></label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="payment-content-right-gift-top-item">
+                                        <label for="">Họ tên người gửi:<span style="color: red;">*</span></label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="payment-content-left-input-bottom">
+                                    <label for="">Lời nhắn: <span style="color: red;">*</span></label>
+                                    <input type="text">
+                                </div>
+                            </div>
+                    </div>
+
+                    <!-- THÔNG BÁO -->
+                    <div class="payment-content-right-mnv">
+                        <select name="" id="">
+                            <option value="">Nhận thông báo tình trạng đơn hàng qua EMAIL</option>
+                            <option value="">Nhận thông báo tình trạng đơn hàng SMS</option>
+                            <option value="">Không nhận thông báo tình trạng đơn hàng</option>
+                        </select>
+                    </div>
+                    <div class="payment-content-right-payment">
+                        <button>THANH TOÁN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </section>
+   <!-- CART -->
+   <section class="cart">
+    <div class="container" style="width:700px">
+        <div class="cart-top-wrap">
+            <div class="cart-top">
+                <div class="cart-top-cart cart-top-item">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="cart-top-payment ">
+                    <i class="fas fa-money-check-alt"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-cart">
+        <div class="cart-content row">
+            <div class="cart-content-left">
+                <table>
+                    <tr style="    background: #0070AE;">
+                        <th style="padding:0 20px ;"><input name="payment" type="checkbox" style="    cursor: pointer;
+                            width: 24px;
+                            height: 24px;"></th>
+                        <th>Sản phẩm</th>
+                        <th>Hình ảnh</th>
+                        <th>Đơn giá</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền</th>
+                        <th>Thao tác</th>
+                    </tr>
+                    <tr>
+                        <td><input name="payment" type="checkbox" style="    cursor: pointer;
+                            width: 24px;
+                            height: 24px;"></td>
+                        <td>Cừu bông trắng lông xù cao cấp
+                            <p style="color:#918f8f;">Vini.Store</p>
+                            <label for="type" style="font-size: 16px;">Phân loại</label>
+                            <select name="type" id="">Phân loại
+                                <option value="">S</option>
+                                <option value="">M</option>
+                                <option value="">L</option>
+                            </select>
+                        </td>
+                        <td><img src="./sp1.jpg" alt=""></td>
+                        <td><p style="text-decoration: line-through; color: #757575;">100.000<sup>đ</sup></p>70.000<sup>đ</sup></td>
+                        <td><input type="number" value="1" min="1" style="    width: 61px;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            height: 28px;
+                            padding: 0 5px;" ></td>
+                        <td>70.000<sup>đ</sup></td>
+                        <td style="color:black;">
+                            <i class="fa-solid fa-trash-can" style=""></i>
+                            <i class="fa-solid fa-trash-can"></i><span>
+                            Xóa</span><br><span>Sản phẩm tương tự
+                                
+                            </span>
+                           
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                            <input name="payment" type="checkbox" style="    cursor: pointer;
+                            width: 24px;
+                            height: 24px;">
+                        </td>
+                        <td>Cừu bông trắng lông xù cao cấp
+                            <p style="color:#918f8f;">Vini.Store</p>
+                            <label for="type" style="font-size: 16px;">Phân loại</label>
+                            <select name="type" id="">Phân loại
+                                <option value="">S</option>
+                                <option value="">M</option>
+                                <option value="">L</option>
+                            </select>
+                        </td>
+                        <td><img src="./sp1.jpg" alt=""></td>
+                        <td><p style="text-decoration: line-through; color: #757575;">100.000<sup>đ</sup></p>70.000<sup>đ</sup></td>
+                        <td><input type="number" value="1" min="1" style="    width: 61px;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            height: 28px;
+                            padding: 0 5px;" ></td>
+                        <td>70.000<sup>đ</sup></td>
+                        <td style="color:black;"><span>
+                            <i class="fa-solid fa-trash-can"></i>
+                            Xóa</span><br><span>Sản phẩm tương tự
+                                
+                            </span>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input name="payment" type="checkbox" style="    cursor: pointer;
+                            width: 24px;
+                            height: 24px;"></td>
+                        <td>Cừu bông trắng lông xù cao cấp
+                            <p style="color:#918f8f;">Vini.Store</p>
+                            <label for="type" style="font-size: 16px;">Phân loại</label>
+                            <select name="type" id="">Phân loại
+                                <option value="">S</option>
+                                <option value="">M</option>
+                                <option value="">L</option>
+                            </select>
+                        </td>
+                        <td><img src="./sp1.jpg" alt=""></td>
+                        <td><p style="text-decoration: line-through; color: #757575;">100.000<sup>đ</sup></p>70.000<sup>đ</sup></td>
+                        <td><input type="number" value="1" min="1" style="    width: 61px;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            height: 28px;
+                            padding: 0 5px;" ></td>
+                        <td>70.000<sup>đ</sup></td>
+                        <td style="color:black;"><span>
+                            <i class="fa-solid fa-trash-can"></i>
+                            Xóa</span><br><span>Sản phẩm tương tự
+                                
+                            </span>
+                            
+                        </td>
+                    </tr>
+                    
+                </table>
+                <!-- DANH SÁCH SẢN PHẨM KHÔNG HOẠT ĐỘNG -->
+                <div class="cart-content-left-product-not-working">
+                    <p style="background: #0070AE;
+                    font-size: 20px;
+                    text-align: center;
+                    padding: 16px 0;
+                    color: white;">Danh Sách Sản Phẩm Không Hoạt Động</p>
+                </div>
+                <table style="color:#918f8f">
+                    <tr>
+                        <td style="    padding: 0 20px;">Hết hàng</td>
+                        <td>Cừu bông trắng lông xù cao cấp
+                            <p style="color:#918f8f;">Vini.Store</p>
+                        </td>
+                        <td><img src="./sp1.jpg" alt="" style="opacity:0.5;"></td>
+                        <td><p style="text-decoration: line-through; color: #757575;">100.000<sup>đ</sup></p>70.000<sup>đ</sup></td>
+                        <td><input type="number" value="1" min="1" max="1" style="    width: 61px;opacity: 0.5;
+                            border: 1px solid black;
+                            border-radius: 5px;
+                            height: 28px;
+                            padding: 0 5px;" ></td>
+                        <td>70.000<sup>đ</sup></td>
+                        <td style="color:black;"><span>
+                            <i class="fa-solid fa-trash-can"></i>
+                            Xóa</span><br><span>Sản phẩm tương tự</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cart-content-right">
+                <table>
+                    <tr>
+                        <th colspan="2">TỔNG THANH TOÁN</th>
+                    </tr>
+                    <tr>
+                        <td>Tổng sản phẩm:</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td style="color: black; font-weight: bold;">Tổng tiền hàng:</td>
+                        <td><p style="color: black; font-weight: bold;">70.000<sup>đ</sup></p></td>
+                    </tr>
+                </table>
+                <div class="cart-content-right-button">
+                    <button>TIẾP TỤC MUA</button>
+                    <button>MUA HÀNG</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+   <!-- VOUCHER -->
+   <div class="voucher">
+        <div class="voucher__overlay">
+            <div class="voucher__body">
+                <div class="voucher__heading">
+                    H3TP VOUCHER
+                </div>
+                <div class="voucher__code">
+                    <p style="margin: 0 10px;
+                    font-size: 24px;">Mã Voucher</p>
+                    <input style="    margin: 0 10px;
+                    height: 34px;
+                    width: 210px;
+                    padding: 2px 10px;
+                    border-radius: 4px;
+                    border: 1px solid black;" type="text" placeholder="Nhập mã voucher" name="" id="">
+                    <p style="margin: 0 10px;
+                    background: #0070AE;
+                    color: white;
+                    padding: 0 10px;
+                    cursor: pointer;
+                    border-radius: 7px;">ÁP DỤNG</p>
+                </div>
+                <div class="voucher__ship-code">
+                    <div class="voucher__ship-code__heading">
+                        Mã Voucher vận chuyển
+                    </div>
+                    <div class="voucher__ship-code__body">
+                        <div class="voucher__ship-code__item">
+                            <span style="    height: 18px;
+                            width: 12px;
+                            background: white;
+                            position: absolute;
+                            top: 45px;
+                            left: -5px;
+                            border-radius: 100%;"></span>
+                            <span style="    height: 18px;
+                            width: 12px;
+                            background: white;
+                            position: absolute;
+                            top: 45px;
+                            right: -5px;
+                            border-radius: 100%;">
+                            </span>
+                            <span style="    height: 80px;
+                            width: 3px;
+                            background: white;
+                            position: absolute;
+                            top: 0px;
+                            left: 95px;
+                            border-radius: 100%;"></span>
+                            <p style="width: 90px;
+                            text-align: center;
+                            padding-top: 20px;
+                            color: white;
+                            line-height: 23px;
+                            padding-left: 13px;">
+                                H3TP VOUCHER
+                            </p>
+                            <p style="    color: white;
+                            font-size: 24px;
+                            /* text-align: end; */
+                            position: absolute;
+                            top: 20px;
+                            right: 15px;
+                            border-radius: 10px;
+                            padding: 4px 16px;
+                            cursor: pointer;
+                            background: pink;">Sử dụng</p>
+                            <div class="voucher__ship-code__name">
+                                <p>Tất cả hình thức thanh toán</p>
+                                <p>HSD : 24/12/2022</p>
+                            </div>
+                        </div>
+
+                        <div class="voucher__ship-code__item">
+                            <span style="    height: 18px;
+                            width: 12px;
+                            background: white;
+                            position: absolute;
+                            top: 45px;
+                            left: -5px;
+                            border-radius: 100%;"></span>
+                            <span style="    height: 18px;
+                            width: 12px;
+                            background: white;
+                            position: absolute;
+                            top: 45px;
+                            right: -5px;
+                            border-radius: 100%;">
+                            </span>
+                            <span style="    height: 80px;
+                            width: 3px;
+                            background: white;
+                            position: absolute;
+                            top: 0px;
+                            left: 95px;
+                            border-radius: 100%;"></span>
+                            <p style="width: 90px;
+                            text-align: center;
+                            padding-top: 20px;
+                            color: white;
+                            line-height: 23px;
+                            padding-left: 13px;">
+                                H3TP VOUCHER
+                            </p>
+                            <p style="    color: white;
+                            font-size: 24px;
+                            /* text-align: end; */
+                            position: absolute;
+                            top: 20px;
+                            right: 15px;
+                            border-radius: 10px;
+                            padding: 4px 16px;
+                            cursor: pointer;
+                            background: pink;">Sử dụng</p>
+                            <div class="voucher__ship-code__name">
+                                <p>Tất cả hình thức thanh toán</p>
+                                <p>HSD : 24/12/2022</p>
+                            </div>
+                        </div>
+
+                        <div class="voucher__ship-code__item">
+                            <span style="    height: 18px;
+                            width: 12px;
+                            background: white;
+                            position: absolute;
+                            top: 45px;
+                            left: -5px;
+                            border-radius: 100%;"></span>
+                            <span style="    height: 18px;
+                            width: 12px;
+                            background: white;
+                            position: absolute;
+                            top: 45px;
+                            right: -5px;
+                            border-radius: 100%;">
+                            </span>
+                            <span style="    height: 80px;
+                            width: 3px;
+                            background: white;
+                            position: absolute;
+                            top: 0px;
+                            left: 95px;
+                            border-radius: 100%;"></span>
+                            <p style="width: 90px;
+                            text-align: center;
+                            padding-top: 20px;
+                            color: white;
+                            line-height: 23px;
+                            padding-left: 13px;">
+                                H3TP VOUCHER
+                            </p>
+                            <p style="    color: white;
+                            font-size: 24px;
+                            /* text-align: end; */
+                            position: absolute;
+                            top: 20px;
+                            right: 15px;
+                            border-radius: 10px;
+                            padding: 4px 16px;
+                            cursor: pointer;
+                            background: pink;">Sử dụng</p>
+                            <div class="voucher__ship-code__name">
+                                <p>Tất cả hình thức thanh toán</p>
+                                <p>HSD : 24/12/2022</p>
+                            </div>
+                        </div>
+
+                        <div class="voucher__ship-code__item">
+                            <span style="    height: 18px;
+                            width: 12px;
+                            background: white;
+                            position: absolute;
+                            top: 45px;
+                            left: -5px;
+                            border-radius: 100%;"></span>
+                            <span style="    height: 18px;
+                            width: 12px;
+                            background: white;
+                            position: absolute;
+                            top: 45px;
+                            right: -5px;
+                            border-radius: 100%;">
+                            </span>
+                            <span style="    height: 80px;
+                            width: 3px;
+                            background: white;
+                            position: absolute;
+                            top: 0px;
+                            left: 95px;
+                            border-radius: 100%;"></span>
+                            <p style="width: 90px;
+                            text-align: center;
+                            padding-top: 20px;
+                            color: white;
+                            line-height: 23px;
+                            padding-left: 13px;">
+                                H3TP VOUCHER
+                            </p>
+                            <p style="    color: white;
+                            font-size: 24px;
+                            /* text-align: end; */
+                            position: absolute;
+                            top: 20px;
+                            right: 15px;
+                            border-radius: 10px;
+                            padding: 4px 16px;
+                            cursor: pointer;
+                            background: pink;">Sử dụng</p>
+                            <div class="voucher__ship-code__name">
+                                <p>Tất cả hình thức thanh toán</p>
+                                <p>HSD : 24/12/2022</p>
+                            </div>
+                        </div>
+
+                        <div class="voucher__ship-code__item">
+                            <span style="    height: 18px;
+                            width: 12px;
+                            background: white;
+                            position: absolute;
+                            top: 45px;
+                            left: -5px;
+                            border-radius: 100%;"></span>
+                            <span style="    height: 18px;
+                            width: 12px;
+                            background: white;
+                            position: absolute;
+                            top: 45px;
+                            right: -5px;
+                            border-radius: 100%;">
+                            </span>
+                            <span style="    height: 80px;
+                            width: 3px;
+                            background: white;
+                            position: absolute;
+                            top: 0px;
+                            left: 95px;
+                            border-radius: 100%;"></span>
+                            <p style="width: 90px;
+                            text-align: center;
+                            padding-top: 20px;
+                            color: white;
+                            line-height: 23px;
+                            padding-left: 13px;">
+                                H3TP VOUCHER
+                            </p>
+                            <p style="    color: white;
+                            font-size: 24px;
+                            /* text-align: end; */
+                            position: absolute;
+                            top: 20px;
+                            right: 15px;
+                            border-radius: 10px;
+                            padding: 4px 16px;
+                            cursor: pointer;
+                            background: pink;">Sử dụng</p>
+                            <div class="voucher__ship-code__name">
+                                <p>Tất cả hình thức thanh toán</p>
+                                <p>HSD : 24/12/2022</p>
+                            </div>
+                        </div>
+
+                        <div class="voucher__ship-code__item">
+                            <span style="    height: 18px;
+                            width: 12px;
+                            background: white;
+                            position: absolute;
+                            top: 45px;
+                            left: -5px;
+                            border-radius: 100%;"></span>
+                            <span style="    height: 18px;
+                            width: 12px;
+                            background: white;
+                            position: absolute;
+                            top: 45px;
+                            right: -5px;
+                            border-radius: 100%;">
+                            </span>
+                            <span style="    height: 80px;
+                            width: 3px;
+                            background: white;
+                            position: absolute;
+                            top: 0px;
+                            left: 95px;
+                            border-radius: 100%;"></span>
+                            <p style="width: 90px;
+                            text-align: center;
+                            padding-top: 20px;
+                            color: white;
+                            line-height: 23px;
+                            padding-left: 13px;">
+                                H3TP VOUCHER
+                            </p>
+                            <p style="    color: white;
+                            font-size: 24px;
+                            /* text-align: end; */
+                            position: absolute;
+                            top: 20px;
+                            right: 15px;
+                            border-radius: 10px;
+                            padding: 4px 16px;
+                            cursor: pointer;
+                            background: pink;">Sử dụng</p>
+                            <div class="voucher__ship-code__name">
+                                <p>Tất cả hình thức thanh toán</p>
+                                <p>HSD : 24/12/2022</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="voucher__shop-code__footer">
+                        <p class="voucher__shop-code__btn" style="background:white;color:black;border:1px solid black;padding: 20px 50px;">Trở lại</p>
+                        <p class="voucher__shop-code__btn" style="margin-left:20px;">Ok</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>
+
+    <!-- FOOTER -->
+    <script> 
+        function showNewAddress(){
+            document.querySelector('.new-address').classList.toggle('active');
+        }
+    </script>
+    <script> 
+        function showNewGift(){
+            document.querySelector('.gift').classList.toggle('active');
+        }
+
+
+        // SWITCH PAYMENT CART
+            document.querySelector('.cart-top-payment').addEventListener('click',()=>{
+            // document.querySelector('.cart-top-cart').classList.remove('cart-top-item');
+            document.querySelector('.cart').style.display='none';
+            document.querySelector('.payment').style.display='block';
+            // document.querySelector('.cart-top-payment').classList.add('cart-top-item');
+            })
+
+            document.querySelector('.payment-top-delivery').addEventListener('click',()=>{
+            // document.querySelector('.payment-top-payment').classList.remove('payment-top-item');
+            document.querySelector('.payment').style.display='none';
+            document.querySelector('.cart').style.display='block';
+            // document.querySelector('.payment-top-delivery').classList.add('payment-top-item');
+        })
+    </script>
+
+
+<!-- (2 cái js dưới không cần) -->
+<script src="js/script.js"></script>
+<script src="js/slider.js"></script>
+
+</body>
+</html>

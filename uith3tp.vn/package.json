@@ -1,0 +1,43 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "watch": "node-sass --watch src/resources/scss/ --output  src/public/css/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vvvjey/uith3tp.vn.git"
+  },
+  "keywords": [
+    "nodejs",
+    "blog"
+  ],
+  "author": "vjey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vvvjey/uith3tp.vn/issues"
+  },
+  "homepage": "https://github.com/vvvjey/uith3tp.vn#readme",
+  "dependencies": {
+    "config": "^3.3.8",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "hbs": "^4.2.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.8.0",
+    "mongoose-slug-generator": "^1.0.4",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.4",
+    "morgan": "^1.10.0",
+    "node-sass": "^8.0.0",
+    "prettier": "^2.8.0"
+  }
+}
